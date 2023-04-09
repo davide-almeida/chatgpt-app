@@ -69,3 +69,4 @@ end
 
 # Added gems
 gem 'faraday' # https://github.com/lostisland/faraday
+gem 'foreman', github: 'ddollar/foreman' # https://github.com/ddollar/foreman

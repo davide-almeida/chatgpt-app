@@ -67,3 +67,5 @@ group :development do
   # gem "spring"
 end
 
+# Added gems
+gem 'faraday' # https://github.com/lostisland/faraday

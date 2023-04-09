@@ -1,13 +1,32 @@
 <div class="container mt-5">
   <h1>ChatGPT-App</h1>
-  <p>Testando o ChatGPT</p>
-  <%= render partial: "ai/request_form", locals: { uuid: @uuid } %>
-  <%= turbo_stream_from "channel_#{@uuid}" %>
-  <%= "UUID: #{@uuid}" %>
-  <div id="ai_output">
-    <%= render partial: "ai/output", locals: { generated_idea: "" } %>
+  <p class="subtitle_gray"><%= "UUID: #{@uuid}" %></p>
+
+  <div class="col-lg-12 col-xs-12">
+    <%= render partial: "ai/request_form", locals: { uuid: @uuid } %>
   </div>
-  <div id="ai_output_image">
-    <%= render partial: "ai/output_image", locals: { generated_image: "" } %>
+
+  <hr class="col-xs-12">
+
+  <%= turbo_stream_from "channel_#{@uuid}" %>
+
+  <div class="card">
+    <div class="card-header">
+      Resposta
+    </div>
+    <div class="card-body">
+      <div id="ai_output" class="mb-3">
+        <%= render partial: "ai/output", locals: { generated_idea: "" } %>
+      </div>
+      <div id="ai_output_image" class="mb-3">
+        <%= render partial: "ai/output_image", locals: { generated_image: "" } %>
+      </div>
+    </div>
   </div>
 </div>
+
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3 subtitle_gray">Repositório:
+    <a href="https://github.com/davide-almeida/chatgpt-app/" target="_blank"> ChatGPT App</a>
+  </div>
+</footer>

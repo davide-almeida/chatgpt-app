@@ -16,6 +16,7 @@
       <div class="mb-3">
         <%= f.label :ai_model, class: "form-label" %>
         <%= f.select :ai_model, options_for_select([
+              [ "gpt-3.5-turbo $0.002 / 1K tokens", "text-davinci-002"],
               [ "Ada $0.0016 / 1K tokens", "ada" ], 
               [ "Babbage $0.0024 / 1K tokens", "babbage" ], 
               [ "Curie $0.0120 / 1K tokens", "curie" ],

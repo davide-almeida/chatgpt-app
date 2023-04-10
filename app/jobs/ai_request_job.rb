@@ -17,6 +17,10 @@ class AiRequestJob < ApplicationJob
       }.to_json
     end
 
+    puts "======================"
+    puts response.body
+    puts "======================"
+
     json_response = JSON.parse(response.body)
     generated_idea = json_response['choices'][0]['text']
     

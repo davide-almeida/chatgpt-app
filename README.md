@@ -72,13 +72,20 @@ E agora já deve ser possível preencher os campos e clicar no botão `Enviar`. 
 
 ---
 
-## Alguns comandos disponíveis no Makefile
+## Alguns comandos disponíveis
+### Makefile
 | Comando | Descrição |
 | --- | --- |
 | `make up` | Inicia os containers com a aplicação |
 | `make down` | Para os containers com a aplicação |
 | `make shell` | Acessa o container Web |
 | `sudo make clean` | Para os containers, exclui volumes e containers, remove o diretório `/tmp` da aplicação e o recria |
+
+### Verificar a lista de models disponíveis da OpenAi
+```
+curl -H "Authorization: Bearer SUA_API_KEY" https://api.openai.com/v1/models
+```
+_Pode ser útil para fazer modificações no select onde é passado o model._
 
 ---
 
